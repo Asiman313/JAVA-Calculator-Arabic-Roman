@@ -1,14 +1,19 @@
-import java.awt.*;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 
-import java.io.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Добро пожаловать в калькулятор Асимана Гулиева");
+        System.out.println();
+        System.out.println("Обрати внимание, что данный калькулятор может работать только с числами от 1 до 10 (как с арабскими так и с римскими)");
+        System.out.println();
+        System.out.println("Можешь ввести операцию:");
 
+        calc();
+
+    }
+    static void calc(){
         String resr = "";
         int res = 0;
         int x = 0;
@@ -17,13 +22,6 @@ public class Main {
         String b_t = "0";
         String[] num = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
         String[] numr = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
-        boolean retVal;
-
-        System.out.println("Добро пожаловать в калькулятор Асимана Гулиева");
-        System.out.println();
-        System.out.println("Обрати внимание, что данный калькулятор может работать только с числами от 1 до 10 (как с арабскими так и с римскими)");
-        System.out.println();
-        System.out.println("Можешь ввести операцию:");
 
         Scanner console = new Scanner(System.in);
         String a = console.nextLine();
