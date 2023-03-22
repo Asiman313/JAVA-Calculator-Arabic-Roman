@@ -1,4 +1,5 @@
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -9,17 +10,20 @@ public class Main {
         System.out.println("Обрати внимание, что данный калькулятор может работать только с числами от 1 до 10 (как с арабскими так и с римскими)");
         System.out.println();
         System.out.println("Можешь ввести операцию:");
+        String resultat = "Просто текст";
 
-        calc();
+        calc(resultat);
 
     }
-    static void calc(){
+
+    public static String calc (String input) {
         String resr = "";
         int res = 0;
         int x = 0;
         int y = 0;
         String a_t = "0";
         String b_t = "0";
+        String ret ="0";
         String[] num = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
         String[] numr = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
 
@@ -131,25 +135,29 @@ public class Main {
                         switch (aa[1]) {
                             case "+":
                                 res = x + y;
-                                System.out.println("Вот что получилось: " + a + " = " + res);
+                                ret = ("Вот что получилось: " + a + " = " + res);
+                                System.out.println(ret);
                                 break;
                         }
                         switch (aa[1]) {
                             case "-":
                                 res = x - y;
-                                System.out.println("Вот что получилось: " + a + " = " + res);
+                                ret = "Вот что получилось: " + a + " = " + res;
+                                System.out.println(ret);
                                 break;
                         }
                         switch (aa[1]) {
                             case "/":
                                 res = x / y;
-                                System.out.println("Вот что получилось: " + a + " = " + res);
+                                ret = "Вот что получилось: " + a + " = " + res;
+                                System.out.println(ret);
                                 break;
                         }
                         switch (aa[1]) {
                             case "*":
                                 res = x * y;
-                                System.out.println("Вот что получилось: " + a + " = " + res);
+                                ret = "Вот что получилось: " + a + " = " + res;
+                                System.out.println(ret);
                                 break;
                         }
                     }
@@ -280,7 +288,8 @@ public class Main {
                                         resr = "XX";
                                         break;
                                 }
-                                System.out.println("Вот что получилось: " + a + " = " + resr);
+                                ret = "Вот что получилось: " + a + " = " + resr;
+                                System.out.println(ret);
                                 break;
                             case "-":
                                 res = x - y;
@@ -316,8 +325,9 @@ public class Main {
                                         resr = "IX";
                                         break;
                                 }
-                                if (resr.intern() == ""){
-                                    System.out.println("Число должно быть положительным");
+                                if (resr.intern() == "") {
+                                    ret = "Вот что получилось: " + a + " = " + resr;
+                                    System.out.println(ret);
                                     break;
                                 }
                                 System.out.println("Вот что получилось: " + a + " = " + resr);
@@ -356,11 +366,12 @@ public class Main {
                                         resr = "X";
                                         break;
                                 }
-                                if (resr.intern() == ""){
+                                if (resr.intern() == "") {
                                     System.out.println("Число должно быть положительным");
                                     break;
                                 }
-                                System.out.println("Вот что получилось: " + a + " = " + resr);
+                                ret = "Вот что получилось: " + a + " = " + resr;
+                                System.out.println(ret);
                                 break;
                             case "*":
                                 res = x * y;
@@ -666,7 +677,8 @@ public class Main {
                                         resr = "C";
                                         break;
                                 }
-                                System.out.println("Вот что получилось: " + a + " = " + resr);
+                                ret = "Вот что получилось: " + a + " = " + resr;
+                                System.out.println(ret);
                                 break;
                         }
                     }
@@ -675,5 +687,10 @@ public class Main {
                 }
             }
         }
+        return ret;
+
     }
 }
+
+
+
