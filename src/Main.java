@@ -1,5 +1,4 @@
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +11,12 @@ public class Main {
         System.out.println("Можешь ввести операцию:");
         String resultat = "Просто текст";
 
-        calc(resultat);
+        for(int m = 1; m>0; m++){
+            calc(resultat);
+            System.out.println();
+            System.out.println("Можешь ввести операцию:");
+        }
+
 
     }
 
