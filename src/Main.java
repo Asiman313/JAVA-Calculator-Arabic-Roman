@@ -330,11 +330,11 @@ public class Main {
                                         break;
                                 }
                                 if (resr.intern() == "") {
-                                    ret = "Вот что получилось: " + a + " = " + resr;
-                                    System.out.println(ret);
+                                    System.out.println("Число должно быть положительным");
                                     break;
                                 }
-                                System.out.println("Вот что получилось: " + a + " = " + resr);
+                                ret = "Вот что получилось: " + a + " = " + resr;
+                                System.out.println(ret);
                                 break;
                             case "/":
                                 res = x / y;
